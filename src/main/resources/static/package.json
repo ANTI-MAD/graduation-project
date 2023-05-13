@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack -d",
+    "dev": "webpack serve --content-base app/",
+    "serve": "webpack serve --config config/webpack.dev.js --progress",
+    "start:dev": "webpack serve"
   },
   "author": "Artsiom Bakun",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "requirejs": "^2.3.6",
@@ -22,6 +27,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
